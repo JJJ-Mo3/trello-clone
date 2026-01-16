@@ -1,0 +1,64 @@
+.card {
+    background-color: var(--bg-surface);
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.card:hover {
+    background-color: var(--bg-canvas);
+}
+
+.card:hover .btn-delete-card {
+    opacity: 1;
+}
+
+.card-dragging {
+    box-shadow: var(--shadow-lg);
+    transform: rotate(2deg);
+    z-index: 50;
+}
+
+.card-labels {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.card-label {
+    height: 8px;
+    width: 40px;
+    border-radius: 4px;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-title {
+    font-size: 14px;
+    color: var(--text-primary);
+    word-break: break-word;
+}
+
+.btn-delete-card {
+    opacity: 0;
+    padding: 4px;
+    color: var(--text-secondary);
+    transition: opacity 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+.btn-delete-card:hover {
+    color: var(--color-red);
+    background-color: rgba(0, 0, 0, 0.05);
+}
